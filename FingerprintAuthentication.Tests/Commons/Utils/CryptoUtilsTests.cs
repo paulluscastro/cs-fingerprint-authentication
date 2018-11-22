@@ -7,14 +7,14 @@ namespace FingerprintAuthentication.Tests.Commons.Utils
     /// Summary description for CryptoTests
     /// </summary>
     [TestClass]
-    public class CryptoTests
+    public class CryptoUtilsTests
     {
         [TestMethod]
         public void HashMD5_Text_Should_Be_Correct()
         {
             string value = "value";
             string expectedHash = "2063C1608D6E0BAF80249C42E2BE5804";
-            Assert.AreEqual(Crypto.HashMD5(value), expectedHash);
+            Assert.AreEqual(CryptoUtils.HashMD5(value), expectedHash);
         }
         [TestMethod]
         public void HashMD5_Text_Salt_Should_Be_Correct()
@@ -22,7 +22,7 @@ namespace FingerprintAuthentication.Tests.Commons.Utils
             string value = "value";
             string salt = "salt";
             string expectedHash = "EDCFC93E3A3010A74FDCF1E8CEEDFEAB";
-            Assert.AreEqual(Crypto.HashMD5(value, salt), expectedHash);
+            Assert.AreEqual(CryptoUtils.HashMD5(value, salt), expectedHash);
         }
     }
 }

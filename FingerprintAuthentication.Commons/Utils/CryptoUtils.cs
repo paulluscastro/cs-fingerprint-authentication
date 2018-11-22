@@ -4,7 +4,7 @@ using System.Security.Cryptography;
 
 namespace FingerprintAuthentication.Commons.Utils
 {
-    public static class Crypto
+    public static class CryptoUtils
     {
         private static StringBuilder sb = new StringBuilder(32);
         public static string HashMD5(string text)

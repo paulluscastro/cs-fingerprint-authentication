@@ -127,9 +127,15 @@
     <value>Informe o login do usuário</value>
   </data>
   <data name="USER004" xml:space="preserve">
-    <value>O nome do usuário deve ter, pelo menos, 3 caracteres.</value>
+    <value>O login do usuário deve ter exatamente 5 dígitos.</value>
   </data>
   <data name="USER005" xml:space="preserve">
     <value>Informe a senha do usuário.</value>
+  </data>
+  <data name="USER006" xml:space="preserve">
+    <value>O usuário não pode se chamar "MASTER"</value>
+  </data>
+  <data name="USER007" xml:space="preserve">
+    <value>O usuário não pode ter login "00000"</value>
   </data>
 </root>

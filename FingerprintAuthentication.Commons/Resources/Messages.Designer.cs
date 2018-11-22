@@ -88,7 +88,7 @@ namespace FingerprintAuthentication.Commons.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to O nome do usuário deve ter, pelo menos, 3 caracteres..
+        ///   Looks up a localized string similar to O login do usuário deve ter exatamente 5 dígitos..
         /// </summary>
         public static string USER004 {
             get {
@@ -102,6 +102,24 @@ namespace FingerprintAuthentication.Commons.Resources {
         public static string USER005 {
             get {
                 return ResourceManager.GetString("USER005", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to O usuário não pode se chamar &quot;MASTER&quot;.
+        /// </summary>
+        public static string USER006 {
+            get {
+                return ResourceManager.GetString("USER006", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to O usuário não pode ter login &quot;00000&quot;.
+        /// </summary>
+        public static string USER007 {
+            get {
+                return ResourceManager.GetString("USER007", resourceCulture);
             }
         }
     }

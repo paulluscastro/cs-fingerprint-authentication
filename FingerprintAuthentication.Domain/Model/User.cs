@@ -17,11 +17,13 @@ namespace FingerprintAuthentication.Domain.Model
 
         protected User()
         {
-            Validator.Add(new ValidationRule<User>(x => !string.IsNullOrEmpty(x.Name), UserErrors.User001.Name));
-            Validator.Add(new ValidationRule<User>(x => x.Name != null && x.Name.Length > 3, UserErrors.User002.Name));
-            Validator.Add(new ValidationRule<User>(x => !string.IsNullOrEmpty(x.Login), UserErrors.User003.Name));
-            Validator.Add(new ValidationRule<User>(x => x.Login != null && x.Login.Length > 3, UserErrors.User004.Name));
-            Validator.Add(new ValidationRule<User>(x => !string.IsNullOrEmpty(x.Password), UserErrors.User005.Name));
+            Validator.Add(new ValidationRule<User>(x => !string.IsNullOrEmpty(x.Name), UserErrors.UserNameNotInformed.Name));
+            Validator.Add(new ValidationRule<User>(x => x.Name != null && x.Name.Length > 3, UserErrors.UserNameMinimumLength.Name));
+            Validator.Add(new ValidationRule<User>(x => !string.IsNullOrEmpty(x.Login), UserErrors.UserLoginNotInformed.Name));
+            Validator.Add(new ValidationRule<User>(x => x.Login != null && x.Login.Length == 5 && StringUtils.NumbersOnly(x.Login).Length == 5, UserErrors.UserLoginInvalid.Name));
+            Validator.Add(new ValidationRule<User>(x => !string.IsNullOrEmpty(x.Password), UserErrors.UserPasswordNotInformed.Name));
+            Validator.Add(new ValidationRule<User>(x => x.Name != null && x.Name.ToUpper() != "MASTER" ? true : x.Login != null && x.Login == "00000", UserErrors.UserNameCannotBeMaster.Name));
+            Validator.Add(new ValidationRule<User>(x => x.Login != null && x.Login != "00000" ? true : x.Name != null && x.Name.ToUpper() == "MASTER", UserErrors.UserLoginCannotBe000.Name));
         }
         public User(string name, string login) : this()
         {
@@ -30,7 +32,7 @@ namespace FingerprintAuthentication.Domain.Model
         }
         public User SetPassword(string newPassword)
         {
-            Password = Crypto.HashMD5(newPassword, Login);
+            Password = CryptoUtils.HashMD5(newPassword, Login);
             return this;
         }
         public override List<ValidationResult> Validate() => Validator.Execute(this);
