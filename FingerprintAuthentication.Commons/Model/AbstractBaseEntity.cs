@@ -11,8 +11,6 @@ namespace FingerprintAuthentication.Commons.Model
         }
 
         public Guid Id { get; protected set; }
-        public DateTime Creation { get; protected set; }
-        public DateTime LastUpdate { get; protected set; }
 
         public abstract List<ValidationResult> Validate();
     }

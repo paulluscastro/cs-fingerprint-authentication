@@ -122,5 +122,41 @@ namespace FingerprintAuthentication.Commons.Resources {
                 return ResourceManager.GetString("USER007", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to O usuário deve ter ao menos um dedo registrado..
+        /// </summary>
+        public static string USER008 {
+            get {
+                return ResourceManager.GetString("USER008", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to O usuário possui dedos repetidos..
+        /// </summary>
+        public static string USER009 {
+            get {
+                return ResourceManager.GetString("USER009", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Dedo já cadastrado para esse usuário..
+        /// </summary>
+        public static string USER010 {
+            get {
+                return ResourceManager.GetString("USER010", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Erro ao cadastrar dedo. Consulte os dados internos da exceção para maiores esclarecimentos..
+        /// </summary>
+        public static string USER011 {
+            get {
+                return ResourceManager.GetString("USER011", resourceCulture);
+            }
+        }
     }
 }

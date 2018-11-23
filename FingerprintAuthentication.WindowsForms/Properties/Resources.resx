@@ -46,7 +46,7 @@
     
     mimetype: application/x-microsoft.net.object.binary.base64
     value   : The object must be serialized with 
-            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : System.Serialization.Formatters.Binary.BinaryFormatter
             : and then encoded with base64 encoding.
     
     mimetype: application/x-microsoft.net.object.soap.base64
@@ -60,7 +60,6 @@
             : and then encoded with base64 encoding.
     -->
   <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
-    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
     <xsd:element name="root" msdata:IsDataSet="true">
       <xsd:complexType>
         <xsd:choice maxOccurs="unbounded">
@@ -69,10 +68,9 @@
               <xsd:sequence>
                 <xsd:element name="value" type="xsd:string" minOccurs="0" />
               </xsd:sequence>
-              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
               <xsd:attribute name="type" type="xsd:string" />
               <xsd:attribute name="mimetype" type="xsd:string" />
-              <xsd:attribute ref="xml:space" />
             </xsd:complexType>
           </xsd:element>
           <xsd:element name="assembly">
@@ -87,10 +85,9 @@
                 <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
                 <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
               </xsd:sequence>
-              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="name" type="xsd:string" msdata:Ordinal="1" />
               <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
               <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
-              <xsd:attribute ref="xml:space" />
             </xsd:complexType>
           </xsd:element>
           <xsd:element name="resheader">
@@ -112,42 +109,9 @@
     <value>2.0</value>
   </resheader>
   <resheader name="reader">
-    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <resheader name="writer">
-    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="USER001" xml:space="preserve">
-    <value>Informe o nome do usuário</value>
-  </data>
-  <data name="USER002" xml:space="preserve">
-    <value>O nome do usuário deve ter, pelo menos, 3 caracteres.</value>
-  </data>
-  <data name="USER003" xml:space="preserve">
-    <value>Informe o login do usuário</value>
-  </data>
-  <data name="USER004" xml:space="preserve">
-    <value>O login do usuário deve ter exatamente 5 dígitos.</value>
-  </data>
-  <data name="USER005" xml:space="preserve">
-    <value>Informe a senha do usuário.</value>
-  </data>
-  <data name="USER006" xml:space="preserve">
-    <value>O usuário não pode se chamar "MASTER"</value>
-  </data>
-  <data name="USER007" xml:space="preserve">
-    <value>O usuário não pode ter login "00000"</value>
-  </data>
-  <data name="USER008" xml:space="preserve">
-    <value>O usuário deve ter ao menos um dedo registrado.</value>
-  </data>
-  <data name="USER009" xml:space="preserve">
-    <value>O usuário possui dedos repetidos.</value>
-  </data>
-  <data name="USER010" xml:space="preserve">
-    <value>Dedo já cadastrado para esse usuário.</value>
-  </data>
-  <data name="USER011" xml:space="preserve">
-    <value>Erro ao cadastrar dedo. Consulte os dados internos da exceção para maiores esclarecimentos.</value>
-  </data>
 </root>

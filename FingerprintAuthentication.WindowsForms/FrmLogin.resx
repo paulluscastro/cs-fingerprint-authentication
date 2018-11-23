@@ -117,37 +117,4 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="USER001" xml:space="preserve">
-    <value>Informe o nome do usuário</value>
-  </data>
-  <data name="USER002" xml:space="preserve">
-    <value>O nome do usuário deve ter, pelo menos, 3 caracteres.</value>
-  </data>
-  <data name="USER003" xml:space="preserve">
-    <value>Informe o login do usuário</value>
-  </data>
-  <data name="USER004" xml:space="preserve">
-    <value>O login do usuário deve ter exatamente 5 dígitos.</value>
-  </data>
-  <data name="USER005" xml:space="preserve">
-    <value>Informe a senha do usuário.</value>
-  </data>
-  <data name="USER006" xml:space="preserve">
-    <value>O usuário não pode se chamar "MASTER"</value>
-  </data>
-  <data name="USER007" xml:space="preserve">
-    <value>O usuário não pode ter login "00000"</value>
-  </data>
-  <data name="USER008" xml:space="preserve">
-    <value>O usuário deve ter ao menos um dedo registrado.</value>
-  </data>
-  <data name="USER009" xml:space="preserve">
-    <value>O usuário possui dedos repetidos.</value>
-  </data>
-  <data name="USER010" xml:space="preserve">
-    <value>Dedo já cadastrado para esse usuário.</value>
-  </data>
-  <data name="USER011" xml:space="preserve">
-    <value>Erro ao cadastrar dedo. Consulte os dados internos da exceção para maiores esclarecimentos.</value>
-  </data>
 </root>
