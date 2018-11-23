@@ -53,6 +53,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FrmAddFinger.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAddFinger.Designer.cs">
+      <DependentUpon>FrmAddFinger.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmNewUser.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -73,6 +79,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FrmAddFinger.resx">
+      <DependentUpon>FrmAddFinger.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmNewUser.resx">
       <DependentUpon>FrmNewUser.cs</DependentUpon>
     </EmbeddedResource>

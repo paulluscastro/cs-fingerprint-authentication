@@ -13,9 +13,9 @@ using System.Windows.Forms;
 
 namespace FingerprintAuthentication.WindowsForms
 {
-    public partial class FrmNewUser : Form
+    public partial class FrmAddFinger : Form
     {
-        public FrmNewUser()
+        public FrmAddFinger()
         {
             InitializeComponent();
         }

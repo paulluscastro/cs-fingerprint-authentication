@@ -42,6 +42,8 @@
             this.dgFingers = new System.Windows.Forms.DataGridView();
             this.Finger = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Side = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lbConfirmPassword = new System.Windows.Forms.Label();
+            this.txtConfirmPassword = new System.Windows.Forms.TextBox();
             this.pnFingers.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgFingers)).BeginInit();
@@ -49,7 +51,8 @@
             // 
             // btnConfirm
             // 
-            this.btnConfirm.Location = new System.Drawing.Point(239, 280);
+            this.btnConfirm.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnConfirm.Location = new System.Drawing.Point(285, 289);
             this.btnConfirm.Name = "btnConfirm";
             this.btnConfirm.Size = new System.Drawing.Size(75, 23);
             this.btnConfirm.TabIndex = 17;
@@ -58,7 +61,8 @@
             // 
             // btnCancel
             // 
-            this.btnCancel.Location = new System.Drawing.Point(28, 280);
+            this.btnCancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnCancel.Location = new System.Drawing.Point(28, 289);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(75, 23);
             this.btnCancel.TabIndex = 16;
@@ -76,9 +80,12 @@
             // 
             // txtPassword
             // 
+            this.txtPassword.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtPassword.Location = new System.Drawing.Point(28, 80);
             this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(286, 20);
+            this.txtPassword.PasswordChar = '●';
+            this.txtPassword.Size = new System.Drawing.Size(332, 20);
             this.txtPassword.TabIndex = 14;
             // 
             // lbLogin
@@ -93,18 +100,23 @@
             // 
             // txtLogin
             // 
+            this.txtLogin.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtLogin.Location = new System.Drawing.Point(28, 41);
             this.txtLogin.Name = "txtLogin";
-            this.txtLogin.Size = new System.Drawing.Size(286, 20);
+            this.txtLogin.Size = new System.Drawing.Size(332, 20);
             this.txtLogin.TabIndex = 12;
             // 
             // pnFingers
             // 
+            this.pnFingers.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.pnFingers.Controls.Add(this.dgFingers);
             this.pnFingers.Controls.Add(this.toolStrip1);
-            this.pnFingers.Location = new System.Drawing.Point(28, 106);
+            this.pnFingers.Location = new System.Drawing.Point(28, 145);
             this.pnFingers.Name = "pnFingers";
-            this.pnFingers.Size = new System.Drawing.Size(286, 168);
+            this.pnFingers.Size = new System.Drawing.Size(332, 138);
             this.pnFingers.TabIndex = 18;
             // 
             // toolStrip1
@@ -114,7 +126,7 @@
             this.btnRemoveFinger});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(286, 25);
+            this.toolStrip1.Size = new System.Drawing.Size(332, 25);
             this.toolStrip1.TabIndex = 0;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -148,7 +160,7 @@
             this.dgFingers.Location = new System.Drawing.Point(0, 25);
             this.dgFingers.MultiSelect = false;
             this.dgFingers.Name = "dgFingers";
-            this.dgFingers.Size = new System.Drawing.Size(286, 143);
+            this.dgFingers.Size = new System.Drawing.Size(332, 113);
             this.dgFingers.TabIndex = 1;
             // 
             // Finger
@@ -167,11 +179,32 @@
             this.Side.ReadOnly = true;
             this.Side.Width = 53;
             // 
+            // lbConfirmPassword
+            // 
+            this.lbConfirmPassword.AutoSize = true;
+            this.lbConfirmPassword.Location = new System.Drawing.Point(25, 103);
+            this.lbConfirmPassword.Name = "lbConfirmPassword";
+            this.lbConfirmPassword.Size = new System.Drawing.Size(90, 13);
+            this.lbConfirmPassword.TabIndex = 20;
+            this.lbConfirmPassword.Text = "Confirm password";
+            // 
+            // txtConfirmPassword
+            // 
+            this.txtConfirmPassword.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtConfirmPassword.Location = new System.Drawing.Point(28, 119);
+            this.txtConfirmPassword.Name = "txtConfirmPassword";
+            this.txtConfirmPassword.PasswordChar = '●';
+            this.txtConfirmPassword.Size = new System.Drawing.Size(332, 20);
+            this.txtConfirmPassword.TabIndex = 19;
+            // 
             // FrmNewUser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(326, 315);
+            this.ClientSize = new System.Drawing.Size(372, 324);
+            this.Controls.Add(this.lbConfirmPassword);
+            this.Controls.Add(this.txtConfirmPassword);
             this.Controls.Add(this.pnFingers);
             this.Controls.Add(this.btnConfirm);
             this.Controls.Add(this.btnCancel);
@@ -209,5 +242,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Side;
         private System.Windows.Forms.ToolStripButton btnAddFinger;
         private System.Windows.Forms.ToolStripButton btnRemoveFinger;
+        private System.Windows.Forms.Label lbConfirmPassword;
+        private System.Windows.Forms.TextBox txtConfirmPassword;
     }
 }
