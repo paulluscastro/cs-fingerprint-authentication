@@ -10,8 +10,23 @@
     <AssemblyName>FingerprintAuthentication.WindowsForms</AssemblyName>
     <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <AutoGenerateBindingRedirects>false</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -22,6 +37,8 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -40,7 +57,7 @@
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
     <Reference Include="NITGEN.SDK.NBioBSP">
-      <HintPath>..\..\..\Program Files\NITGEN eNBSP x64\SDK\dotNET\NITGEN.SDK.NBioBSP.dll</HintPath>
+      <HintPath>C:\Program Files\NITGEN eNBSP x64\SDK\dotNET\NITGEN.SDK.NBioBSP.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
@@ -56,7 +73,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FingersIndex.cs" />
+    <Compile Include="FingerCapturer.cs" />
     <Compile Include="FrmAddFinger.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -120,11 +137,11 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\FingerprintAuthentication.Commons\FingerprintAuthentication.Commons.csproj">
-      <Project>{d4bce3bc-631f-4bc4-a5e7-abd741caea72}</Project>
+      <Project>{d90a5c72-d4fb-4446-adce-a79db9c035d7}</Project>
       <Name>FingerprintAuthentication.Commons</Name>
     </ProjectReference>
     <ProjectReference Include="..\FingerprintAuthentication.Domain\FingerprintAuthentication.Domain.csproj">
-      <Project>{48dd9587-bcd6-4aea-b7df-c429e64d421c}</Project>
+      <Project>{dcfed3a3-aa6f-4d44-9e6e-82311e5b2494}</Project>
       <Name>FingerprintAuthentication.Domain</Name>
     </ProjectReference>
     <ProjectReference Include="..\FingerprintAuthentication.Infrastructure\FingerprintAuthentication.Infrastructure.csproj">
@@ -135,6 +152,18 @@
       <Project>{f29ccd93-41e7-4b23-b88a-35fa834f322e}</Project>
       <Name>FingerprintAuthentication.Tests</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.1">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.1 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

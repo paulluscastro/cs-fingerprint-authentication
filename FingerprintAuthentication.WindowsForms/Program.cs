@@ -11,10 +11,17 @@ namespace FingerprintAuthentication.WindowsForms
 {
     static class Program
     {
+        public static User CurrentUser { get; private set; } = null;
+
         private static bool Login()
         {
-            using(FrmLogin login = new FrmLogin())
-                return login.ShowDialog() == DialogResult.OK;
+            using (FrmLogin login = new FrmLogin())
+                if (login.ShowDialog() == DialogResult.OK)
+                {
+                    CurrentUser = login.LoggedUser;
+                    return true;
+                }
+            return false;
         }
 
         /// <summary>
@@ -35,7 +42,9 @@ namespace FingerprintAuthentication.WindowsForms
                 Debug.WriteLine("Usuário MASTER criado");
             }
             if (Login())
+            {
                 Application.Run(new FrmMain());
+            }
         }
     }
 }

@@ -29,6 +29,10 @@
         private void InitializeComponent()
         {
             this.pnFingerAuthentication = new System.Windows.Forms.Panel();
+            this.lnkRetry = new System.Windows.Forms.LinkLabel();
+            this.lbAccessStatus = new System.Windows.Forms.Label();
+            this.lbIdentifiedUser = new System.Windows.Forms.Label();
+            this.picFinger = new System.Windows.Forms.PictureBox();
             this.lnkPassword = new System.Windows.Forms.LinkLabel();
             this.lbUserName = new System.Windows.Forms.Label();
             this.lbPlaceFinger = new System.Windows.Forms.Label();
@@ -40,11 +44,16 @@
             this.lbLogin = new System.Windows.Forms.Label();
             this.txtLogin = new System.Windows.Forms.TextBox();
             this.pnFingerAuthentication.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picFinger)).BeginInit();
             this.pnPasswordAuthentication.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnFingerAuthentication
             // 
+            this.pnFingerAuthentication.Controls.Add(this.lnkRetry);
+            this.pnFingerAuthentication.Controls.Add(this.lbAccessStatus);
+            this.pnFingerAuthentication.Controls.Add(this.lbIdentifiedUser);
+            this.pnFingerAuthentication.Controls.Add(this.picFinger);
             this.pnFingerAuthentication.Controls.Add(this.lnkPassword);
             this.pnFingerAuthentication.Controls.Add(this.lbUserName);
             this.pnFingerAuthentication.Controls.Add(this.lbPlaceFinger);
@@ -54,10 +63,54 @@
             this.pnFingerAuthentication.Size = new System.Drawing.Size(326, 194);
             this.pnFingerAuthentication.TabIndex = 1;
             // 
+            // lnkRetry
+            // 
+            this.lnkRetry.AutoSize = true;
+            this.lnkRetry.Location = new System.Drawing.Point(269, 156);
+            this.lnkRetry.Margin = new System.Windows.Forms.Padding(3, 0, 16, 16);
+            this.lnkRetry.Name = "lnkRetry";
+            this.lnkRetry.Size = new System.Drawing.Size(32, 13);
+            this.lnkRetry.TabIndex = 25;
+            this.lnkRetry.TabStop = true;
+            this.lnkRetry.Text = "Retry";
+            this.lnkRetry.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.RetryFingerprint);
+            // 
+            // lbAccessStatus
+            // 
+            this.lbAccessStatus.AutoSize = true;
+            this.lbAccessStatus.Location = new System.Drawing.Point(151, 84);
+            this.lbAccessStatus.Name = "lbAccessStatus";
+            this.lbAccessStatus.Size = new System.Drawing.Size(82, 13);
+            this.lbAccessStatus.TabIndex = 24;
+            this.lbAccessStatus.Text = "Acesso liberado";
+            this.lbAccessStatus.Visible = false;
+            // 
+            // lbIdentifiedUser
+            // 
+            this.lbIdentifiedUser.AutoSize = true;
+            this.lbIdentifiedUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbIdentifiedUser.Location = new System.Drawing.Point(151, 64);
+            this.lbIdentifiedUser.Name = "lbIdentifiedUser";
+            this.lbIdentifiedUser.Size = new System.Drawing.Size(48, 13);
+            this.lbIdentifiedUser.TabIndex = 23;
+            this.lbIdentifiedUser.Text = "Paullus";
+            this.lbIdentifiedUser.Visible = false;
+            // 
+            // picFinger
+            // 
+            this.picFinger.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.picFinger.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.picFinger.Location = new System.Drawing.Point(19, 77);
+            this.picFinger.Name = "picFinger";
+            this.picFinger.Size = new System.Drawing.Size(92, 92);
+            this.picFinger.TabIndex = 22;
+            this.picFinger.TabStop = false;
+            // 
             // lnkPassword
             // 
-            this.lnkPassword.AutoSize = true;
-            this.lnkPassword.Location = new System.Drawing.Point(187, 156);
+            this.lnkPassword.Location = new System.Drawing.Point(136, 156);
             this.lnkPassword.Margin = new System.Windows.Forms.Padding(3, 0, 16, 16);
             this.lnkPassword.Name = "lnkPassword";
             this.lnkPassword.Size = new System.Drawing.Size(114, 13);
@@ -159,15 +212,17 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(326, 194);
-            this.Controls.Add(this.pnPasswordAuthentication);
             this.Controls.Add(this.pnFingerAuthentication);
+            this.Controls.Add(this.pnPasswordAuthentication);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FrmLogin";
             this.Text = "Login";
+            this.Shown += new System.EventHandler(this.FrmLogin_Shown);
             this.pnFingerAuthentication.ResumeLayout(false);
             this.pnFingerAuthentication.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picFinger)).EndInit();
             this.pnPasswordAuthentication.ResumeLayout(false);
             this.pnPasswordAuthentication.PerformLayout();
             this.ResumeLayout(false);
@@ -187,5 +242,9 @@
         private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.Label lbLogin;
         private System.Windows.Forms.TextBox txtLogin;
+        private System.Windows.Forms.PictureBox picFinger;
+        private System.Windows.Forms.Label lbAccessStatus;
+        private System.Windows.Forms.Label lbIdentifiedUser;
+        private System.Windows.Forms.LinkLabel lnkRetry;
     }
 }

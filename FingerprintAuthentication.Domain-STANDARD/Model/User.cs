@@ -27,7 +27,7 @@ namespace FingerprintAuthentication.Domain.Model
             Validator.Add(new ValidationRule<User>(u => !string.IsNullOrEmpty(u.Password), UserErrors.UserPasswordNotInformed.Name));
             Validator.Add(new ValidationRule<User>(u => u.Name != null && u.Name.ToUpper() != "MASTER" ? true : u.Login != null && u.Login == "00000", UserErrors.UserNameCannotBeMaster.Name));
             Validator.Add(new ValidationRule<User>(u => u.Login != null && u.Login != "00000" ? true : u.Name != null && u.Name.ToUpper() == "MASTER", UserErrors.UserLoginCannotBe000.Name));
-            // Validator.Add(new ValidationRule<User>(u => u.Name != null && u.Name.ToUpper() == "MASTER" ? true : u.Fingers.Count > 0, UserErrors.UserMustRegisterFingers.Name));
+            Validator.Add(new ValidationRule<User>(u => u.Name != null && u.Name.ToUpper() == "MASTER" ? true : u.Fingers.Count > 0, UserErrors.UserMustRegisterFingers.Name));
         }
         public User(string name, string login) : this()
         {

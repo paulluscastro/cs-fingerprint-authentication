@@ -59,11 +59,11 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\FingerprintAuthentication.Commons\FingerprintAuthentication.Commons.csproj">
-      <Project>{d4bce3bc-631f-4bc4-a5e7-abd741caea72}</Project>
+      <Project>{d90a5c72-d4fb-4446-adce-a79db9c035d7}</Project>
       <Name>FingerprintAuthentication.Commons</Name>
     </ProjectReference>
     <ProjectReference Include="..\FingerprintAuthentication.Domain\FingerprintAuthentication.Domain.csproj">
-      <Project>{48dd9587-bcd6-4aea-b7df-c429e64d421c}</Project>
+      <Project>{dcfed3a3-aa6f-4d44-9e6e-82311e5b2494}</Project>
       <Name>FingerprintAuthentication.Domain</Name>
     </ProjectReference>
   </ItemGroup>

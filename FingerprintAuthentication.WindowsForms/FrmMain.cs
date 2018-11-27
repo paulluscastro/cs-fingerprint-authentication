@@ -15,6 +15,8 @@ namespace FingerprintAuthentication.WindowsForms
         public FrmMain()
         {
             InitializeComponent();
+            mnuNewUser.Visible = Program.CurrentUser.Login == "00000";
+            mnuNewFinger.Visible = Program.CurrentUser.Login != "00000";
         }
 
         private void CloseProgram(object sender, EventArgs e) =>Application.Exit();
@@ -23,6 +25,12 @@ namespace FingerprintAuthentication.WindowsForms
         {
             using (FrmNewUser window = new FrmNewUser())
                 window.ShowDialog();
+        }
+
+        private void mnuNewFinger_Click(object sender, EventArgs e)
+        {
+            using (FrmAddFinger window = new FrmAddFinger())
+                window.NewFinger();
         }
     }
 }

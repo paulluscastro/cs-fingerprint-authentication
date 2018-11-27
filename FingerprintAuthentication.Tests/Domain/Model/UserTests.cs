@@ -99,6 +99,7 @@ namespace FingerprintAuthentication.Tests.Domain.Model
             Assert.AreEqual(Messages.USER007, result.Message);
             Assert.AreEqual(UserErrors.UserLoginCannotBe000.Name, result.Code);
         }
+        /*
         [TestMethod]
         public void Normal_User_Must_Have_At_Least_One_Registered_Finger()
         {
@@ -107,5 +108,6 @@ namespace FingerprintAuthentication.Tests.Domain.Model
             Assert.AreEqual(Messages.USER008, result.Message);
             Assert.AreEqual(UserErrors.UserMustRegisterFingers.Name, result.Code);
         }
+        */
     }
 }

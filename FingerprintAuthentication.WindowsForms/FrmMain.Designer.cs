@@ -33,6 +33,7 @@
             this.mnuClose = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuUser = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuNewUser = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuNewFinger = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -58,14 +59,15 @@
             // mnuClose
             // 
             this.mnuClose.Name = "mnuClose";
-            this.mnuClose.Size = new System.Drawing.Size(103, 22);
+            this.mnuClose.Size = new System.Drawing.Size(180, 22);
             this.mnuClose.Text = "Close";
             this.mnuClose.Click += new System.EventHandler(this.CloseProgram);
             // 
             // mnuUser
             // 
             this.mnuUser.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.mnuNewUser});
+            this.mnuNewUser,
+            this.mnuNewFinger});
             this.mnuUser.Name = "mnuUser";
             this.mnuUser.Size = new System.Drawing.Size(47, 20);
             this.mnuUser.Text = "Users";
@@ -76,6 +78,13 @@
             this.mnuNewUser.Size = new System.Drawing.Size(180, 22);
             this.mnuNewUser.Text = "Create new user";
             this.mnuNewUser.Click += new System.EventHandler(this.mnuNewUser_Click);
+            // 
+            // mnuNewFinger
+            // 
+            this.mnuNewFinger.Name = "mnuNewFinger";
+            this.mnuNewFinger.Size = new System.Drawing.Size(180, 22);
+            this.mnuNewFinger.Text = "Register new finger";
+            this.mnuNewFinger.Click += new System.EventHandler(this.mnuNewFinger_Click);
             // 
             // FrmMain
             // 
@@ -99,6 +108,7 @@
         private System.Windows.Forms.ToolStripMenuItem mnuClose;
         private System.Windows.Forms.ToolStripMenuItem mnuUser;
         private System.Windows.Forms.ToolStripMenuItem mnuNewUser;
+        private System.Windows.Forms.ToolStripMenuItem mnuNewFinger;
     }
 }
 

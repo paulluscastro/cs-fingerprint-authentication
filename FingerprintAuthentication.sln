@@ -3,10 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28010.2003
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FingerprintAuthentication.Domain", "FingerprintAuthentication.Domain\FingerprintAuthentication.Domain.csproj", "{48DD9587-BCD6-4AEA-B7DF-C429E64D421C}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FingerprintAuthentication.Commons", "FingerprintAuthentication.Commons\FingerprintAuthentication.Commons.csproj", "{D4BCE3BC-631F-4BC4-A5E7-ABD741CAEA72}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FingerprintAuthentication.Tests", "FingerprintAuthentication.Tests\FingerprintAuthentication.Tests.csproj", "{F29CCD93-41E7-4B23-B88A-35FA834F322E}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FingerprintAuthentication.WindowsForms", "FingerprintAuthentication.WindowsForms\FingerprintAuthentication.WindowsForms.csproj", "{DDD56C9C-DA3E-4CC3-B500-44538950352A}"
@@ -15,20 +11,16 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FingerprintAuthentication.C
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FingerprintAuthentication.Infrastructure", "FingerprintAuthentication.Infrastructure\FingerprintAuthentication.Infrastructure.csproj", "{FC11441B-FF69-455A-B049-4CAF895F5E96}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FingerprintAuthentication.Commons", "FingerprintAuthentication.Commons\FingerprintAuthentication.Commons.csproj", "{D90A5C72-D4FB-4446-ADCE-A79DB9C035D7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FingerprintAuthentication.Domain", "FingerprintAuthentication.Domain\FingerprintAuthentication.Domain.csproj", "{DCFED3A3-AA6F-4D44-9E6E-82311E5B2494}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{48DD9587-BCD6-4AEA-B7DF-C429E64D421C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{48DD9587-BCD6-4AEA-B7DF-C429E64D421C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{48DD9587-BCD6-4AEA-B7DF-C429E64D421C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{48DD9587-BCD6-4AEA-B7DF-C429E64D421C}.Release|Any CPU.Build.0 = Release|Any CPU
-		{D4BCE3BC-631F-4BC4-A5E7-ABD741CAEA72}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D4BCE3BC-631F-4BC4-A5E7-ABD741CAEA72}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D4BCE3BC-631F-4BC4-A5E7-ABD741CAEA72}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D4BCE3BC-631F-4BC4-A5E7-ABD741CAEA72}.Release|Any CPU.Build.0 = Release|Any CPU
 		{F29CCD93-41E7-4B23-B88A-35FA834F322E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{F29CCD93-41E7-4B23-B88A-35FA834F322E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F29CCD93-41E7-4B23-B88A-35FA834F322E}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -45,6 +37,14 @@ Global
 		{FC11441B-FF69-455A-B049-4CAF895F5E96}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FC11441B-FF69-455A-B049-4CAF895F5E96}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FC11441B-FF69-455A-B049-4CAF895F5E96}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D90A5C72-D4FB-4446-ADCE-A79DB9C035D7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D90A5C72-D4FB-4446-ADCE-A79DB9C035D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D90A5C72-D4FB-4446-ADCE-A79DB9C035D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D90A5C72-D4FB-4446-ADCE-A79DB9C035D7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DCFED3A3-AA6F-4D44-9E6E-82311E5B2494}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DCFED3A3-AA6F-4D44-9E6E-82311E5B2494}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DCFED3A3-AA6F-4D44-9E6E-82311E5B2494}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DCFED3A3-AA6F-4D44-9E6E-82311E5B2494}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
