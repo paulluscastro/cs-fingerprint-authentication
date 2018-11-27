@@ -36,17 +36,17 @@
             this.lbLogin = new System.Windows.Forms.Label();
             this.txtLogin = new System.Windows.Forms.TextBox();
             this.pnFingers = new System.Windows.Forms.Panel();
-            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.btnAddFinger = new System.Windows.Forms.ToolStripButton();
-            this.btnRemoveFinger = new System.Windows.Forms.ToolStripButton();
             this.dgFingers = new System.Windows.Forms.DataGridView();
             this.Finger = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Side = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.btnAddFinger = new System.Windows.Forms.ToolStripButton();
+            this.btnRemoveFinger = new System.Windows.Forms.ToolStripButton();
             this.lbConfirmPassword = new System.Windows.Forms.Label();
             this.txtConfirmPassword = new System.Windows.Forms.TextBox();
             this.pnFingers.SuspendLayout();
-            this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgFingers)).BeginInit();
+            this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnConfirm
@@ -119,35 +119,6 @@
             this.pnFingers.Size = new System.Drawing.Size(332, 138);
             this.pnFingers.TabIndex = 18;
             // 
-            // toolStrip1
-            // 
-            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.btnAddFinger,
-            this.btnRemoveFinger});
-            this.toolStrip1.Location = new System.Drawing.Point(0, 0);
-            this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(332, 25);
-            this.toolStrip1.TabIndex = 0;
-            this.toolStrip1.Text = "toolStrip1";
-            // 
-            // btnAddFinger
-            // 
-            this.btnAddFinger.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.btnAddFinger.Image = ((System.Drawing.Image)(resources.GetObject("btnAddFinger.Image")));
-            this.btnAddFinger.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnAddFinger.Name = "btnAddFinger";
-            this.btnAddFinger.Size = new System.Drawing.Size(33, 22);
-            this.btnAddFinger.Text = "Add";
-            // 
-            // btnRemoveFinger
-            // 
-            this.btnRemoveFinger.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.btnRemoveFinger.Image = ((System.Drawing.Image)(resources.GetObject("btnRemoveFinger.Image")));
-            this.btnRemoveFinger.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnRemoveFinger.Name = "btnRemoveFinger";
-            this.btnRemoveFinger.Size = new System.Drawing.Size(54, 22);
-            this.btnRemoveFinger.Text = "Remove";
-            // 
             // dgFingers
             // 
             this.dgFingers.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
@@ -178,6 +149,36 @@
             this.Side.Name = "Side";
             this.Side.ReadOnly = true;
             this.Side.Width = 53;
+            // 
+            // toolStrip1
+            // 
+            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.btnAddFinger,
+            this.btnRemoveFinger});
+            this.toolStrip1.Location = new System.Drawing.Point(0, 0);
+            this.toolStrip1.Name = "toolStrip1";
+            this.toolStrip1.Size = new System.Drawing.Size(332, 25);
+            this.toolStrip1.TabIndex = 0;
+            this.toolStrip1.Text = "toolStrip1";
+            // 
+            // btnAddFinger
+            // 
+            this.btnAddFinger.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.btnAddFinger.Image = ((System.Drawing.Image)(resources.GetObject("btnAddFinger.Image")));
+            this.btnAddFinger.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnAddFinger.Name = "btnAddFinger";
+            this.btnAddFinger.Size = new System.Drawing.Size(33, 22);
+            this.btnAddFinger.Text = "Add";
+            this.btnAddFinger.Click += new System.EventHandler(this.btnAddFinger_Click);
+            // 
+            // btnRemoveFinger
+            // 
+            this.btnRemoveFinger.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.btnRemoveFinger.Image = ((System.Drawing.Image)(resources.GetObject("btnRemoveFinger.Image")));
+            this.btnRemoveFinger.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnRemoveFinger.Name = "btnRemoveFinger";
+            this.btnRemoveFinger.Size = new System.Drawing.Size(54, 22);
+            this.btnRemoveFinger.Text = "Remove";
             // 
             // lbConfirmPassword
             // 
@@ -219,9 +220,9 @@
             this.Text = "New User";
             this.pnFingers.ResumeLayout(false);
             this.pnFingers.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgFingers)).EndInit();
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgFingers)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

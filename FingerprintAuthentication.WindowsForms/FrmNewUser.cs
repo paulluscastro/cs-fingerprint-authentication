@@ -19,5 +19,11 @@ namespace FingerprintAuthentication.WindowsForms
         {
             InitializeComponent();
         }
+
+        private void btnAddFinger_Click(object sender, EventArgs e)
+        {
+            using (FrmAddFinger window = new FrmAddFinger())
+                window.ShowDialog();
+        }
     }
 }

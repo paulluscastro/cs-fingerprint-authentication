@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnConfirm = new System.Windows.Forms.Button();
+            this.btnCapture = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
             this.lbSelectFinger = new System.Windows.Forms.Label();
             this.cmbFingers = new System.Windows.Forms.ComboBox();
@@ -38,15 +38,16 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // btnConfirm
+            // btnCapture
             // 
-            this.btnConfirm.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnConfirm.Location = new System.Drawing.Point(285, 428);
-            this.btnConfirm.Name = "btnConfirm";
-            this.btnConfirm.Size = new System.Drawing.Size(75, 23);
-            this.btnConfirm.TabIndex = 17;
-            this.btnConfirm.Text = "Confirm";
-            this.btnConfirm.UseVisualStyleBackColor = true;
+            this.btnCapture.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCapture.Location = new System.Drawing.Point(285, 428);
+            this.btnCapture.Name = "btnCapture";
+            this.btnCapture.Size = new System.Drawing.Size(75, 23);
+            this.btnCapture.TabIndex = 17;
+            this.btnCapture.Text = "Capture";
+            this.btnCapture.UseVisualStyleBackColor = true;
+            this.btnCapture.Click += new System.EventHandler(this.CaptureFinger);
             // 
             // btnCancel
             // 
@@ -122,7 +123,7 @@
             this.Controls.Add(this.cmbSides);
             this.Controls.Add(this.lbSelectSide);
             this.Controls.Add(this.cmbFingers);
-            this.Controls.Add(this.btnConfirm);
+            this.Controls.Add(this.btnCapture);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.lbSelectFinger);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -138,7 +139,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Button btnConfirm;
+        private System.Windows.Forms.Button btnCapture;
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.Label lbSelectFinger;
         private System.Windows.Forms.ComboBox cmbFingers;

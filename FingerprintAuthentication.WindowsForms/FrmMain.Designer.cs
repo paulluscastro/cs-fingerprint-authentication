@@ -58,7 +58,7 @@
             // mnuClose
             // 
             this.mnuClose.Name = "mnuClose";
-            this.mnuClose.Size = new System.Drawing.Size(180, 22);
+            this.mnuClose.Size = new System.Drawing.Size(103, 22);
             this.mnuClose.Text = "Close";
             this.mnuClose.Click += new System.EventHandler(this.CloseProgram);
             // 
@@ -75,6 +75,7 @@
             this.mnuNewUser.Name = "mnuNewUser";
             this.mnuNewUser.Size = new System.Drawing.Size(180, 22);
             this.mnuNewUser.Text = "Create new user";
+            this.mnuNewUser.Click += new System.EventHandler(this.mnuNewUser_Click);
             // 
             // FrmMain
             // 

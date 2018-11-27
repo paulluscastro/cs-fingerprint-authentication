@@ -18,5 +18,11 @@ namespace FingerprintAuthentication.WindowsForms
         }
 
         private void CloseProgram(object sender, EventArgs e) =>Application.Exit();
+
+        private void mnuNewUser_Click(object sender, EventArgs e)
+        {
+            using (FrmNewUser window = new FrmNewUser())
+                window.ShowDialog();
+        }
     }
 }

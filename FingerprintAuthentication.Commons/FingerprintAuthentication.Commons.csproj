@@ -5,6 +5,12 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Reference Include="NITGEN.SDK.NBioBSP">
+      <HintPath>..\..\..\Program Files\NITGEN eNBSP x64\SDK\dotNET\NITGEN.SDK.NBioBSP.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
     <Compile Update="Resources\Messages.Designer.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
