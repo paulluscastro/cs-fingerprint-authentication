@@ -6,6 +6,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.Entity;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -57,30 +58,36 @@ namespace FingerprintAuthentication.WindowsForms
                 else
                 {
                     FingerContext ctx = new FingerContext();
-                    FIR captured = new FIR(); ;
-                    captured.Data = Encoding.UTF8.GetBytes(EncodedData);
-                    INPUT_FIR inputFIR;
-                    inputFIR = new INPUT_FIR
+                    INPUT_FIR captured = new INPUT_FIR
                     {
-                        Form = INPUT_FIR_FORM.FULLFIR,
+                        Form = INPUT_FIR_FORM.TEXTENCODE,
                     };
-                    inputFIR.InputFIR.FIR = captured;
-                    foreach (RegisteredFinger finger in ctx.RegisteredFingers)
+                    captured.InputFIR.TextFIR = new FIR_TEXTENCODE
+                    {
+                        IsWideChar = true,
+                        TextFIR = EncodedData
+                    };
+                    foreach (RegisteredFinger finger in ctx.RegisteredFingers.Include(rf => rf.User).ToList())
                     {
                         uint ret;
-                        INPUT_FIR storedFIR;
-                        FIR stored;
-                        bool result;
-                        stored = new FIR
+                        bool result = false;
+                        INPUT_FIR stored = new INPUT_FIR
                         {
-                            Data = Encoding.UTF8.GetBytes(finger.EncodedText),
+                            Form = INPUT_FIR_FORM.TEXTENCODE,
                         };
-                        storedFIR = new INPUT_FIR
+                        stored.InputFIR.TextFIR = new FIR_TEXTENCODE
                         {
-                            Form = INPUT_FIR_FORM.FULLFIR,
+                            IsWideChar = true,
+                            TextFIR = finger.EncodedText
                         };
-                        storedFIR.InputFIR.FIR = stored;
-                        ret = capturer.Api.VerifyMatch(captured, stored, out result, null);
+                        try
+                        {
+                            capturer.CheckError(capturer.Api.VerifyMatch(captured, stored, out result, null), "Erro ao validar os dedos");
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show(ex.Message);
+                        }
                         if (result)
                         {
                             lbIdentifiedUser.Text = finger.User.Name;

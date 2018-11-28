@@ -25,7 +25,7 @@ namespace FingerprintAuthentication.Infrastructure.Map
             Property(rf => rf.EncodedText)
                 .HasColumnOrder(4)
                 .HasColumnName("Dados")
-                .HasMaxLength(32)
+                .HasMaxLength(1024)
                 .IsFixedLength()
                 .IsRequired();
 

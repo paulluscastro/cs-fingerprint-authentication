@@ -32,5 +32,10 @@ namespace FingerprintAuthentication.WindowsForms
             using (FrmAddFinger window = new FrmAddFinger())
                 window.NewFinger();
         }
+
+        private void mnuLogoff_Click(object sender, EventArgs e)
+        {
+            Program.Logoff();
+        }
     }
 }

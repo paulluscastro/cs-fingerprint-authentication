@@ -23,13 +23,13 @@ namespace FingerprintAuthentication.Domain.Model
             Validator.Add(new ValidationRule<RegisteredFinger>(r => !string.IsNullOrEmpty(r.EncodedText), RegisteredFingerErrors.RegisteredFingerFingerDataNotInformed.Name));
         }
 
-        public RegisteredFinger(Finger finger, Side side, string encodedText) : base()
+        public RegisteredFinger(User user, Finger finger, Side side, string encodedText) : base()
         {
+            User = user;
             Finger = finger;
             Side = side;
             EncodedText = encodedText;
         }
-
         public override List<ValidationResult> Validate() => Validator.Execute(this);
     }
 }

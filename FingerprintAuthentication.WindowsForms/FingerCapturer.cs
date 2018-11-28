@@ -16,7 +16,7 @@ namespace FingerprintAuthentication.WindowsForms
         public Color BackgroundColor { get; set; }
 
         public static FingerCapturer GetInstance() => instance == null ? instance = new FingerCapturer() : instance;
-        private void CheckError(uint ret, string message)
+        public void CheckError(uint ret, string message)
         {
             if (ret != Error.NONE)
                 throw new Exception($"[{ret}] {message} - {Error.GetErrorDescription(ret)}");

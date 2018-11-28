@@ -77,7 +77,9 @@ namespace FingerprintAuthentication.WindowsForms
         public void NewFinger()
         {
             if (ShowDialog() != DialogResult.OK) return;
-            RegisteredFinger rf = new RegisteredFinger(Finger.From((int)cmbFingers.SelectedValue), Side.From((int)cmbSides.SelectedValue), EncodedData);
+            FingerContext ctx = new FingerContext();
+            ctx.Users.Attach(Program.CurrentUser);
+            RegisteredFinger rf = Program.CurrentUser.AddFinger(Finger.From((int)cmbFingers.SelectedValue), Side.From((int)cmbSides.SelectedValue), EncodedData);
             List<ValidationResult> result = rf.Validate();
             if (result.Count != 0)
             {
@@ -85,9 +87,6 @@ namespace FingerprintAuthentication.WindowsForms
                 MessageBox.Show(message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-            FingerContext ctx = new FingerContext();
-            ctx.Users.Attach(Program.CurrentUser);
-            Program.CurrentUser.Fingers.Add(rf);
             ctx.SaveChanges();
             DialogResult = DialogResult.OK;
         }

@@ -9,6 +9,7 @@ namespace FingerprintAuthentication.Domain.Enums
         public static Finger Middle = new Finger(3, "Middle");
         public static Finger Ring = new Finger(4, "Ring");
         public static Finger Pinky = new Finger(5, "Pinky");
+        protected Finger() : base() { }
         private Finger(int id, string name) : base(id, name) { }
         public static Finger[] List() => new Finger[] { Thumb, Index, Middle, Ring, Pinky };
         public static Finger From(int value) => List().Where(uf => uf.Id == value).FirstOrDefault();

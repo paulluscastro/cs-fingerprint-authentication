@@ -43,7 +43,7 @@ namespace FingerprintAuthentication.Domain.Model
 
         public RegisteredFinger AddFinger(Finger finger, Side side, string data)
         {
-            RegisteredFinger registeredFinger = new RegisteredFinger(finger, side, data);
+            RegisteredFinger registeredFinger = new RegisteredFinger(this, finger, side, data);
             List<ValidationResult> result = registeredFinger.Validate();
             if (result.Count > 0) throw ValidationResult.BuildException(result, Messages.ResourceManager.GetString(UserErrors.UserErrorDuringFingerRegistration.Name));
             if (FindFinger(finger, side) != null) throw new Exception(Messages.ResourceManager.GetString(UserErrors.UserFingerAlreadyRegistered.Name));

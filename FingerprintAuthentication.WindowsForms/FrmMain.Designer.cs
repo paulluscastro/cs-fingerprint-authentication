@@ -34,6 +34,7 @@
             this.mnuUser = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuNewUser = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuNewFinger = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuLogoff = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -51,6 +52,7 @@
             // mnuSystem
             // 
             this.mnuSystem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mnuLogoff,
             this.mnuClose});
             this.mnuSystem.Name = "mnuSystem";
             this.mnuSystem.Size = new System.Drawing.Size(57, 20);
@@ -86,6 +88,13 @@
             this.mnuNewFinger.Text = "Register new finger";
             this.mnuNewFinger.Click += new System.EventHandler(this.mnuNewFinger_Click);
             // 
+            // mnuLogoff
+            // 
+            this.mnuLogoff.Name = "mnuLogoff";
+            this.mnuLogoff.Size = new System.Drawing.Size(180, 22);
+            this.mnuLogoff.Text = "Logoff";
+            this.mnuLogoff.Click += new System.EventHandler(this.mnuLogoff_Click);
+            // 
             // FrmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -109,6 +118,7 @@
         private System.Windows.Forms.ToolStripMenuItem mnuUser;
         private System.Windows.Forms.ToolStripMenuItem mnuNewUser;
         private System.Windows.Forms.ToolStripMenuItem mnuNewFinger;
+        private System.Windows.Forms.ToolStripMenuItem mnuLogoff;
     }
 }
 

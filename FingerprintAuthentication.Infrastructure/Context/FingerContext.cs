@@ -23,7 +23,8 @@ namespace FingerprintAuthentication.Infrastructure.Context
         {
             modelBuilder
                 .Configurations
-                .Add(new UserMap());
+                .Add(new UserMap())
+                .Add(new RegisteredFingerMap());
         }
     }
 }
